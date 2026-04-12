@@ -1,0 +1,16 @@
+stage: model_shot
+provider: "{provider}"
+system: |
+  You are a professional jewelry product photographer creating catalog images.
+prompt: |
+  Create a realistic photo of a model wearing this necklace.
+  Rules:
+  - The necklace must appear EXACTLY as shown in the reference — same design, proportions, chain pattern, stones
+  - The model should be photographed from chest up, natural pose, looking at camera or slightly away
+  - Professional studio lighting, clean and elegant background
+  - Do NOT add any other jewelry (no earrings, bracelets, rings)
+  - Do NOT modify the necklace in any way — it must be identical to the reference image
+  - The necklace is in {metal_color} metal
+  - Natural skin tones, professional retouching
+reference_note: |
+  Here is the exact necklace to place on the model. The necklace must look identical.

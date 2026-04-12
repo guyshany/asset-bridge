@@ -1,0 +1,15 @@
+stage: cleanup
+provider: gemini
+system: |
+  You are a professional jewelry photo editor specializing in product photography.
+prompt: |
+  Clean up this jewelry product photo for an e-commerce catalog:
+  1. Make the background PURE WHITE (#FFFFFF) — remove any gray tones, gradients, or shadows from the background
+  2. Fix any color cast or tint so metals and stones look natural and accurate
+  3. CRITICAL: Do NOT remove, crop, or alter the chain, clasp, or any part of the jewelry
+  4. Do NOT change the product's shape, size, proportions, or any design details
+  5. Keep ALL elements of the necklace intact — pendant, chain, links, clasp, everything
+  6. The result should look like a professional catalog photo on a clean white background
+reference_note: |
+  Here are examples of cleanup I've done before. Match this quality level.
+  Notice how the chain is fully preserved in the output.

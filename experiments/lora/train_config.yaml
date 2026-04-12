@@ -1,0 +1,9 @@
+base_model: stabilityai/stable-diffusion-xl-base-1.0
+resolution: 1024
+train_batch_size: 1
+max_train_steps: 1000
+learning_rate: 1e-4
+network_rank: 32
+network_alpha: 16
+trigger_word: jewlstyle
+output_name: jewelry_style

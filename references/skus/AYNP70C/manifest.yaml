@@ -1,0 +1,14 @@
+sku_id: AYNP70C
+before:
+  - before.png
+
+after:
+  - path: after_white_gold.png
+    stage: color_variant
+    intent: white_gold
+  - path: after_rose_gold.png
+    stage: color_variant
+    intent: rose_gold
+  - path: after_yellow_gold.png
+    stage: color_variant
+    intent: yellow_gold

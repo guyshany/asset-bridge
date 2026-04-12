@@ -1,0 +1,16 @@
+stage: settings_shot
+provider: "{provider}"
+system: |
+  You are a professional jewelry product photographer creating lifestyle images.
+prompt: |
+  Create an elegant lifestyle/display photo featuring this necklace.
+  Rules:
+  - The necklace must appear EXACTLY as shown in the reference — same design, proportions, chain pattern, stones
+  - Place the necklace on/near a luxury surface (velvet, marble, wood, etc.)
+  - Add tasteful props if appropriate (flowers, fabric, soft lighting elements)
+  - Professional product photography lighting with soft shadows
+  - Do NOT modify the necklace in any way — it must be identical to the reference image
+  - The necklace is in {metal_color} metal
+  - Clean, aspirational aesthetic suitable for e-commerce or social media
+reference_note: |
+  Here is the exact necklace to feature. The necklace must look identical.

@@ -1,0 +1,43 @@
+billing_profile: experiment  # experiment | production
+
+stage1:
+  cleanup_method: local       # local (default, free, preserves chains) | gemini (paid API) | rembg (complex backgrounds only)
+  bg_threshold: 200           # local method: pixels above this (all RGB channels) → pure white. Lower = more aggressive.
+  skip_gemini_cleanup: false   # only applies when cleanup_method=rembg — skips the color correction step
+
+metal_colors:
+  - yellow_gold
+  - white_gold
+  - rose_gold
+
+providers:
+  stage1_color: gemini
+  stage2_color: gemini
+  stage3_model: gemini       # overridden to openai when billing_profile is production
+  stage4_settings: gemini    # overridden to openai when billing_profile is production
+
+free_tier:
+  min_delay_seconds: 2
+  max_retries: 5
+  daily_request_cap: 50   # hard limit — pipeline stops before this many Gemini API calls per day
+
+output_dir: output
+input_dir: input
+publish_dir: publish
+
+color_model:
+  weights: experiments/color_model/best_color_model.pt
+
+trigger_word: jewlstyle
+
+lora:
+  model_shots_weights: experiments/lora/weights/model_shots
+  settings_shots_weights: experiments/lora/weights/settings_shots
+
+local_diffusion:
+  enabled: false
+  comfyui_base_url: "http://127.0.0.1:8188"
+  lora:
+    path: experiments/lora/weights/mystore_style.safetensors
+    strength_model: 0.85
+    strength_clip: 0.85

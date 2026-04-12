@@ -1,0 +1,16 @@
+stage: color_variant
+provider: gemini
+system: |
+  You are a professional jewelry photo editor.
+prompt: |
+  Change the metal color of this necklace to {target_color}.
+  Rules:
+  - Change ONLY the metal parts (chain, clasp, setting frame, raised metal letterforms)
+  - Do NOT change any stones, gems, diamonds, pearls, or enamel/resin inlay (hue, saturation, or pattern)
+  - Do NOT change the chain pattern, link shape, or dimensions
+  - Do NOT change the overall size or proportions
+  - Preserve all reflections and lighting naturally for {target_color}
+  - The result should look like a real photograph, not digitally altered
+reference_note: |
+  Here are examples of color changes I've done before.
+  Match this style and quality level.
